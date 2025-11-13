@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc.2000</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Inter:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            color: white;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Floating Heart Animation */
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-150px) scale(1.5) rotate(var(--rotation));
+                opacity: 0;
+            }
+        }
+
+        .heart-pop {
+            position: fixed;
+            pointer-events: none;
+            color: #ef4444;
+            font-size: 1.5rem;
+            z-index: 100;
+            animation: floatUp 2s ease-out forwards;
+        }
+
+        /* Card Hover Effects */
+        .tool-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Fixed Header -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
+            <a href="#" class="font-['JetBrains_Mono'] text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 hover:opacity-80 transition-opacity">
+                calc.2000
+            </a>
+            <div class="hidden md:block text-sm text-slate-400">
+                Engineering Utilities
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-24 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12 animate-[fadeIn_1s_ease-out]">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Select a Calculator</h2>
+                <p class="text-slate-400">Professional tools for electrical calculations and settings.</p>
+            </div>
+
+            <!-- Grid Layout for Links -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Card 1: Relay Settings -->
+                <a href="https://mr2000-collab.github.io/Relay-settings/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-amber-500/50 hover:bg-slate-800 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-sliders text-6xl text-amber-500"></i>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 bg-amber-500/10 rounded-lg text-amber-500">
+                            <i class="fa-solid fa-sliders text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-100">Relay Settings</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">Configure and analyze protection relay parameters efficiently.</p>
+                    <span class="inline-flex items-center text-amber-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        Open Tool <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+
+                <!-- Card 2: Electrical Multi Calculator -->
+                <a href="https://mr2000-collab.github.io/Electrical-multi-calculator-/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 hover:bg-slate-800 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-calculator text-6xl text-cyan-500"></i>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 bg-cyan-500/10 rounded-lg text-cyan-500">
+                            <i class="fa-solid fa-bolt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-100">Multi Calculator</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">Comprehensive electrical calculations for general engineering needs.</p>
+                    <span class="inline-flex items-center text-cyan-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        Open Tool <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+
+                <!-- Card 3: Parallel Transformer -->
+                <a href="https://mr2000-collab.github.io/Parallel-Transformer-Load-Calculator/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 hover:bg-slate-800 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-industry text-6xl text-purple-500"></i>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 bg-purple-500/10 rounded-lg text-purple-500">
+                            <i class="fa-solid fa-transformer text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-100">Transformer Load</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">Calculate load sharing for parallel transformer operations.</p>
+                    <span class="inline-flex items-center text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        Open Tool <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Fixed Footer -->
+    <footer class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 p-4 text-center z-50">
+        <p class="text-slate-400 text-sm select-none">
+            made with 
+            <span id="heart-trigger" class="inline-block cursor-pointer mx-1 transition-transform active:scale-90 hover:scale-110" title="Click me!">
+                <i class="fa-solid fa-heart text-red-500"></i>
+            </span> 
+            by mr2000
+        </p>
+    </footer>
+
+    <script>
+        const heartTrigger = document.getElementById('heart-trigger');
+
+        heartTrigger.addEventListener('click', (e) => {
+            createHeart(e);
+            // Add a burst effect by creating a few more with slight delays
+            setTimeout(() => createHeart(e), 100);
+            setTimeout(() => createHeart(e), 200);
+            setTimeout(() => createHeart(e), 300);
+        });
+
+        function createHeart(e) {
+            const heart = document.createElement('i');
+            heart.classList.add('fa-solid', 'fa-heart', 'heart-pop');
+            
+            // Get position of the click/element
+            const rect = heartTrigger.getBoundingClientRect();
+            
+            // Center the new heart on the trigger, with slight random offset
+            const randomX = (Math.random() - 0.5) * 40; // Random X offset between -20px and 20px
+            
+            heart.style.left = `${rect.left + rect.width / 2 + randomX}px`;
+            heart.style.top = `${rect.top}px`;
+            
+            // Random rotation for the animation
+            const randomRot = (Math.random() - 0.5) * 60; // Random rotation -30 to 30 deg
+            heart.style.setProperty('--rotation', `${randomRot}deg`);
+
+            document.body.appendChild(heart);
+
+            // Cleanup after animation ends (2 seconds)
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
