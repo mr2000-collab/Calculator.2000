@@ -51,7 +51,6 @@
 </head>
 <body class="flex flex-col min-h-screen">
 
-    <!-- Fixed Header -->
     <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
             <a href="#" class="font-['JetBrains_Mono'] text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 hover:opacity-80 transition-opacity">
@@ -63,7 +62,6 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="flex-grow pt-24 pb-24 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12 animate-[fadeIn_1s_ease-out]">
@@ -71,10 +69,8 @@
                 <p class="text-slate-400">Professional tools for electrical calculations and settings.</p>
             </div>
 
-            <!-- Grid Layout for Links -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Card 1: Relay Settings -->
                 <a href="https://mr2000-collab.github.io/Relay-settings/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-amber-500/50 hover:bg-slate-800 overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                         <i class="fa-solid fa-sliders text-6xl text-amber-500"></i>
@@ -91,7 +87,6 @@
                     </span>
                 </a>
 
-                <!-- Card 2: Electrical Multi Calculator -->
                 <a href="https://mr2000-collab.github.io/Electrical-multi-calculator-/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 hover:bg-slate-800 overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                         <i class="fa-solid fa-calculator text-6xl text-cyan-500"></i>
@@ -108,7 +103,6 @@
                     </span>
                 </a>
 
-                <!-- Card 3: Parallel Transformer -->
                 <a href="https://mr2000-collab.github.io/Parallel-Transformer-Load-Calculator/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 hover:bg-slate-800 overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                         <i class="fa-solid fa-industry text-6xl text-purple-500"></i>
@@ -125,11 +119,26 @@
                     </span>
                 </a>
 
+                <a href="https://mr2000-collab.github.io/IDMT-Relay-Trip-Time-Calculator/" target="_blank" class="tool-card group relative bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-green-500/50 hover:bg-slate-800 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-clock text-6xl text-green-500"></i>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-3 bg-green-500/10 rounded-lg text-green-500">
+                            <i class="fa-solid fa-clock text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-100">IDMT Trip Time</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">Calculate trip time for IDMT (Inverse Definite Minimum Time) relays.</p>
+                    <span class="inline-flex items-center text-green-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        Open Tool <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+
             </div>
         </div>
     </main>
 
-    <!-- Fixed Footer -->
     <footer class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 p-4 text-center z-50">
         <p class="text-slate-400 text-sm select-none">
             made with 
@@ -178,4 +187,3 @@
     </script>
 </body>
 </html>
-
